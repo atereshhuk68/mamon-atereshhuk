@@ -27,14 +27,67 @@ ul li {
 	list-style: none;
 }
 
+.section-title-margin {
+	margin: 75px 0px;
+}
+
 /*! Общие стили */
 .container {
 	width: 100%;
 	padding: 0 15px;
 	margin: 0 auto; 
 }
+@media (min-width: 576px){
+	.container {
+		max-width: 540px;
+	}
+}
+@media (min-width: 769px){
+	.container {
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px){
+	.container {
+		max-width: 960px;
+	}
+}
 @media (min-width: 1200px){
 	.container {
 		max-width: 1170px;
 	}
+}
+
+.section-title {
+	/* чтобы линии не выходили за ширину блока заголовка */
+	overflow: hidden;
+	color: #c2c2c2;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 300;
+}
+.section-title:before,
+.section-title:after {
+	content: '';
+	margin: 0 30px;
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	width: 100%;
+	height: 1px;
+	background: #c2c2c2;
+	border: solid #FFF;
+	border-width: 0 10px;
+}
+.section-title:before {
+	/* смещаем левую линию влево отрицательным отступом, равным 100% ширины
+	** благодаря этому линия встает слева от текста
+	*/
+	margin-left: -85%;
+}
+.section-title:after {
+	/* смещаем правую линию вправо отрицательным отступом, равным 100% ширины
+	** благодаря этому линия встает справа от текста
+	*/
+	margin-right: -100%;
 }

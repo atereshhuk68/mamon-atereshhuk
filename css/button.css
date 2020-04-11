@@ -6,10 +6,16 @@
 	border: none;
 	background-color: transparent;
 	font-weight: 400;
+	transition: all .5s;
+	text-decoration: none;
 }
 
 /* button primary */
 .button-primary {
 	background-color: var(--accent-color);
 	color: white;
+}
+.button-primary:hover {
+	background-color: #fff;
+	color: black;
 }
